@@ -5,7 +5,7 @@ node {
 	}
 	
 	stage('Build Image'){
-		app = docker.build('anthonyvu/example-app')
+		app = docker.build('anthonyvu:${env.BUILD_ID}')
 	}
 
 	stage('Test'){
