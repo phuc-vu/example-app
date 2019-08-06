@@ -12,7 +12,7 @@ node {
 	  /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-		app = docker.build("anthonyvu:${env.BUILD_ID}","--name=example-app")
+		app = docker.build("anthonyvu:${env.BUILD_ID}")
 	}
 
 	stage('Test'){
